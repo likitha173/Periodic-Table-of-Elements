@@ -1,0 +1,82 @@
+/* Container for the periodic table */
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr); /* Adjust for your table */
+    gap: 5px;
+}
+
+/* Style for each element */
+.element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease; /* Add a smooth scaling transition */
+}
+
+/* Style for the atomic number (left-hand side) */
+.element-number {
+    font-size: 16px;
+    position: absolute;
+    top: 5px; /* Adjust the vertical position as needed */
+    left: 5px; /* Adjust the horizontal position as needed */
+}
+
+/* Style for the element symbol */
+.element-symbol {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style for the element name */
+.element-name {
+    font-size: 12px;
+}
+
+/* Style for the atomic mass (same color as atomic number) */
+.atomic-mass {
+    font-size: 16px;
+    color: black; /* Change the color as needed */
+    position: absolute;
+    top: 5px; /* Adjust the vertical position as needed */
+    right: 5px; /* Adjust the horizontal position as needed */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add a smooth opacity transition */
+}
+
+/* Show the atomic mass on hover */
+.element:hover .atomic-mass {
+    opacity: 1;
+}
+
+/* Scale on hover */
+.element:hover {
+    transform: scale(1.1); /* Increase the size by 10% on hover */
+}
+
+
+
+/* Style for the hidden element information */
+.element-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 300px; /* Adjust the width as needed */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the visible element on hover */
+.element:hover .element-info {
+    display: block;
+}
