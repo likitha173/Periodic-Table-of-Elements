@@ -1,3 +1,4 @@
+
 /* Container for the periodic table */
 .periodic-table {
     display: grid;
@@ -62,21 +63,46 @@
 
 
 
-/* Style for the hidden element information */
-.element-info {
+
+
+
+/* Style for the element info box */
+.element-info-box {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 300px; /* Adjust the width as needed */
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
 }
 
-/* Style for the visible element on hover */
-.element:hover .element-info {
-    display: block;
+/* Style for the element image */
+.element-image {
+    position: relative;
+}
+
+.element-image img {
+    width: 200px;
+    height: 200px;
+}
+
+.element-details {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+/* Style for the atomic number and mass */
+.element-number, .element-mass {
+    margin: 0;
+    font-weight: bold;
 }

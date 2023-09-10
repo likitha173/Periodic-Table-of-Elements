@@ -1,3 +1,66 @@
+
+
+/* Style for the hidden element information */
+.element-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 300px; /* Adjust the width as needed */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the visible element on hover */
+.element:hover .element-info {
+    display: block;
+}
+
+
+
+
+
+<div class="element-info">
+    <h2>Hydrogen</h2>
+    <p>Reactive non-metals</p>
+    <p>3D Bohr model from Signal Garden</p>
+    <p>Hydrogen is the chemical element with the symbol H and atomic number 1...</p>
+    <p>Atomic mass: 1.0078 u</p>
+    <p>Melting point: -259.16°C (13.99 K)</p>
+    <p>Boiling point: -252.87°C (20.28 K)</p>
+    <p>Discovery date: 1766</p>
+    <p>Discovered by: Henry Cavendish</p>
+    <p><a href="https://en.wikipedia.org/wiki/Hydrogen">More about Hydrogen →</a></p>
+</div>
+
+
+
+
+
+
+// Example of how to load an image dynamically
+const elementImages = {
+    1: 'hydrogen.jpg', // Replace with the actual image URLs
+    // Add images for other elements
+};
+
+document.querySelectorAll('.element').forEach((element) => {
+    const atomicNumber = element.getAttribute('data-atomic-number');
+    const imageSrc = elementImages[atomicNumber];
+    if (imageSrc) {
+        const img = document.createElement('img');
+        img.src = imageSrc;
+        element.querySelector('.element-info').appendChild(img);
+    }
+});
+
+
+
+
+
 <nav>
     <table>
         <tr>

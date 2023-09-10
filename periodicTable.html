@@ -1,37 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Periodic Table of Elements</title>
     <link rel="stylesheet" href="periodicTable.css">
 </head>
+
 <body>
     <div class="periodic-table">
         <!-- Example for the first element -->
-        <div class="element" data-atomic-number="1" data-atomic-mass="1.008">
+        <div class="element" data-atomic-number="1" data-atomic-mass="1.008"
+            data-summary="Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass."
+            data-discovered-by="Henry Cavendish" data-element-name="Hydrogen">
             <div class="element-number">1</div>
             <div class="element-symbol">H</div>
             <div class="element-name">Hydrogen</div>
             <div class="atomic-mass">1.008</div>
-
-            <div class="element-info">
-                <h2>Hydrogen</h2>
-                <p>Reactive non-metals</p>
-                <p>X</p>
-                <p>3D Bohr model from Signal Garden</p>
-                <p>Hydrogen is the chemical element with the symbol H and atomic number 1...</p>
-                <p>Atomic mass: 1.0078 u</p>
-                <p>Melting point: -259.16°C (13.99 K)</p>
-                <p>Boiling point: -252.87°C (20.28 K)</p>
-                <p>Discovery date: 1766</p>
-                <p>Discovered by: Henry Cavendish</p>
-                <p><a href="https://en.wikipedia.org/wiki/Hydrogen">More about Hydrogen →</a></p>
-            </div>
-
         </div>
 
         <!-- Repeat this structure for other elements -->
     </div>
+
+    <!-- Element Info Box -->
+    <div class="element-info-box">
+        <div class="element-image">
+            <img src="images/Hydrogen.webp" alt="" />
+        </div>
+        <div class="element-info">
+            <h2 class="element-name"></h2>
+            <p class="element-summary"></p>
+            <p><strong>Atomic Number: 1</strong> <span class="element-number"></span></p>
+            <p><strong>Atomic Mass:</strong> <span class="element-mass"></span></p>
+            <p><strong>Discovered By:</strong> <span class="element-discovered-by"></span></p>
+        </div>
+        <button class="close-button">Close</button>
+    </div>
+
+    <script>
+        // JavaScript code for handling element info box
+        const elements = document.querySelectorAll('.element');
+        const elementInfoBox = document.querySelector('.element-info-box');
+        const elementImage = document.querySelector('.element-image img');
+        const elementName = document.querySelector('.element-name');
+        const elementSummary = document.querySelector('.element-summary');
+        const elementNumber = document.querySelector('.element-number');
+        const elementMass = document.querySelector('.element-mass');
+        const elementDiscoveredBy = document.querySelector('.element-discovered-by');
+        const closeButton = document.querySelector('.close-button');
+
+        elements.forEach((element) => {
+            element.addEventListener('click', () => {
+                elementImage.src = `images/${element.getAttribute('data-element-name')}.webp`; 
+                elementImage.alt = element.getAttribute('data-element-name');
+                elementName.textContent = element.querySelector('.element-name').textContent;
+                elementSummary.textContent = element.getAttribute('data-summary');
+                elementNumber.textContent = element.getAttribute('data-atomic-number');
+                elementMass.textContent = element.getAttribute('data-atomic-mass');
+                elementDiscoveredBy.textContent = `${element.getAttribute('data-discovered-by')}`;
+                elementInfoBox.style.display = 'block';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            elementInfoBox.style.display = 'none';
+        });
+    </script>
 </body>
+
 </html>
+
