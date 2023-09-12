@@ -209,13 +209,15 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid;
+    border: 2px solid black;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0.5;
+    opacity: 1;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 .gap {
@@ -238,6 +240,10 @@ body {
     opacity: 0.2;
 }
 
+
+
+
+
 .alkali-metal {
     color: #224D56;
 }
@@ -258,40 +264,48 @@ body {
 .transition-metal .square {
     background-color: #423B64;
 }
-
-
-
-
-
-.lanthanoid {
-    color: #ec77a3;
-}
-
-.actinoid {
-    color: #c686cc;
-}
-
-
-
-
 .post-transition-metal {
-    color: #4cddf3;
+    color: #2F4C47;
 }
-
+.post-transition-metal .square {
+    background-color: #2F4C47;
+    
+}
 .metalloid {
-    color: #3aefb6;
+    color: #513D1A;
 }
-
+.metalloid .square {
+    background-color: #513D1A; 
+}
 .other-nonmetal {
-    color: #52ee61;
+    color: #2A4163;
 }
-
+.other-nonmetal .square {
+    background-color: #2A4163; 
+}
 .noble-gas {
-    color: #759fff;
+    color: #623842;
 }
-
+.noble-gas .square {
+    background-color: #623842; 
+}
+.lanthanoid {
+    color: #026BAA;
+}
+.lanthanoid .square {
+    background-color: #026BAA; 
+}
+.actinoid {
+    color: #603B28;
+}
+.actinoid .square {
+    background-color: #603B28; 
+}
 .unknown {
-    color: #cccccc;
+    color: #47464B;
+}
+.unknown .square {
+    background-color: #47464B;
 }
 
 .r1 {
@@ -505,6 +519,8 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    font-weight: bolder;
+    font-size: 0.9vw;
 }
 
 .key .row label {
