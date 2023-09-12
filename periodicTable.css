@@ -56,7 +56,6 @@ body {
     height: 100%;
     border: 2px solid black;
     box-sizing: border-box;
-    /* background: #101318; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,10 +239,6 @@ body {
     opacity: 0.2;
 }
 
-
-
-
-
 .alkali-metal {
     color: #224D56;
 }
@@ -255,55 +250,72 @@ body {
 .alkaline-earth-metal {
     color: #622C39;
 }
+
 .alkaline-earth-metal .square {
     background-color: #622C39;
 }
+
 .transition-metal {
     color: #423B64;
 }
+
 .transition-metal .square {
     background-color: #423B64;
 }
+
 .post-transition-metal {
     color: #2F4C47;
 }
+
 .post-transition-metal .square {
     background-color: #2F4C47;
-    
+
 }
+
 .metalloid {
     color: #513D1A;
 }
+
 .metalloid .square {
-    background-color: #513D1A; 
+    background-color: #513D1A;
 }
+
 .other-nonmetal {
     color: #2A4163;
 }
+
 .other-nonmetal .square {
-    background-color: #2A4163; 
+    background-color: #2A4163;
 }
+
 .noble-gas {
     color: #623842;
 }
+
 .noble-gas .square {
-    background-color: #623842; 
+    background-color: #623842;
 }
+
 .lanthanoid {
     color: #026BAA;
 }
+
 .lanthanoid .square {
-    background-color: #026BAA; 
+    background-color: #026BAA;
 }
+
 .actinoid {
     color: #603B28;
 }
+
 .actinoid .square {
-    background-color: #603B28; 
+    background-color: #603B28;
 }
+
 .unknown {
     color: #47464B;
 }
+
 .unknown .square {
     background-color: #47464B;
 }
@@ -434,70 +446,6 @@ body {
 
 .c18 input[type=radio].activate:checked~.square {
     left: -100%;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes noise {
-
-    0%,
-    100% {
-        background-position: 0 0;
-    }
-
-    10% {
-        background-position: -5% -10%;
-    }
-
-    20% {
-        background-position: -15% 5%;
-    }
-
-    30% {
-        background-position: 7% -25%;
-    }
-
-    40% {
-        background-position: 20% 25%;
-    }
-
-    50% {
-        background-position: -25% 10%;
-    }
-
-    60% {
-        background-position: 15% 5%;
-    }
-
-    70% {
-        background-position: 0% 15%;
-    }
-
-    80% {
-        background-position: 25% 35%;
-    }
-
-    90% {
-        background-position: -10% 10%;
-    }
 }
 
 .key {
