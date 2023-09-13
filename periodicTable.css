@@ -1,5 +1,5 @@
 body {
-    background: #101318;
+    background: #202123;
 }
 
 .wrapper {
@@ -235,7 +235,7 @@ body {
     border-width: 0 0 2px 2px;
     border-style: solid;
     margin-left: -1px;
-    color: #fff;
+    color: #ffffff;
     opacity: 0.2;
 }
 
