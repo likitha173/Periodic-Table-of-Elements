@@ -73,7 +73,6 @@ body {
     padding: 2px;
     color: #ffffff;
     font-size: 0.9vw;
-
 }
 
 .element .label {
@@ -124,9 +123,6 @@ body {
   .element:hover .atomic-mass {
     opacity: 1;
   }
-
-  
-
 
 .element input[type=radio] {
     -webkit-appearance: none;
