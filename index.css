@@ -74,7 +74,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 20px;
+    padding: 0px;
     z-index: 100;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 400px;
@@ -82,16 +82,23 @@
 }
 
 /* Style for the element image */
+/* Style for the element image */
+/* Style for the element image */
 .element-image {
     position: relative;
+    width: 400px; /* Ensure the container takes full width */
+    height: 200px; /* Ensure the container takes full height */
+    overflow: hidden; /* Clip the image within the little screen */
 }
 
 .element-image img {
-    width: 200px;
-    height: 200px;
+    width: 100%; /* Make the image take full width of its container */
+    height: 100%; /* Make the image take full height of its container */
+    object-fit: cover; /* Make the image cover the container and maintain its aspect ratio */
 }
 
-.element-details {
+
+/* .element-details {
     position: absolute;
     bottom: 5px;
     right: 5px;
@@ -99,7 +106,10 @@
     padding: 5px;
     border-radius: 5px;
     text-align: right;
-}
+} */
+
+
+
 
 /* Style for the atomic number and mass */
 .element-number, .element-mass {
@@ -114,3 +124,7 @@
 #Noble-gases-He{
     background-color: #623842;
 }
+
+
+
+
