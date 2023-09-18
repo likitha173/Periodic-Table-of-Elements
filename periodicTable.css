@@ -35,18 +35,6 @@ body {
     transition: 500ms;
 }
 
-.element .overlay {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: 500ms;
-    background-color: #101318;
-}
 
 .element .square {
     position: absolute;
@@ -65,13 +53,13 @@ body {
     transition-delay: 0ms, 100ms, 0ms, 0ms, 0ms, 0ms;
     border-radius: 5px;
 }
+
 .element:hover .square {
-    transform: scale(1.5); /* Adjust the scale factor as needed */
-    transition: transform 500ms; /* Add a smooth transition effect */
-    z-index: 2; /* Ensure it appears on top of other elements */
+    transform: scale(1.5);
+    transition: transform 500ms;
+    z-index: 2;
 
 }
-
 
 .element .atomic-number {
     position: absolute;
@@ -103,15 +91,19 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 10%; /* Padding for the top */
+    padding-top: 10%;
     padding-bottom: 10%;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
     color: #ffffff;
-    
-  }
-  
-  .element .atomic-mass {
+    transition: opacity 0.3s ease, padding 0.3s ease;
+}
+
+.element:hover .atomic-weight {
+    opacity: 1;
+}
+
+.element .atomic-mass {
     position: absolute;
     right: 0;
     top: 0;
@@ -119,14 +111,9 @@ body {
     margin: 0;
     padding: 2px;
     opacity: 1;
-    /* transition: 200ms; */
     text-align: right;
     color: #ffffff;
-  }
-  
-  /* .element:hover .atomic-mass {
-    opacity: 1;
-  } */
+}
 
 .element input[type=radio] {
     -webkit-appearance: none;
@@ -140,9 +127,6 @@ body {
     cursor: pointer;
     outline: none;
 }
-
-
-
 
 .placeholder {
     position: relative;
