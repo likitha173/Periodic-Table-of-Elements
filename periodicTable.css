@@ -392,22 +392,6 @@ header {
     grid-column: 18;
 }
 
-.r1 input[type=radio].activate:checked~.square {
-    top: 100%;
-}
-
-.r10 input[type=radio].activate:checked~.square {
-    top: -100%;
-}
-
-.c1 input[type=radio].activate:checked~.square {
-    left: 100%;
-}
-
-.c18 input[type=radio].activate:checked~.square {
-    left: -100%;
-}
-
 .key {
     position: relative;
     z-index: 1;
