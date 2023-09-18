@@ -79,6 +79,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     text-align: center;
+    border-radius: 15px;
 }
 
 /* Style for the element image */
@@ -95,8 +96,35 @@
     width: 100%; /* Make the image take full width of its container */
     height: 100%; /* Make the image take full height of its container */
     object-fit: cover; /* Make the image cover the container and maintain its aspect ratio */
+    border-radius: 15px;
+}
+/* .element-image .element-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
 }
 
+.element-image .element-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+}
+
+.element-image .element-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+} */
 
 /* .element-details {
     position: absolute;

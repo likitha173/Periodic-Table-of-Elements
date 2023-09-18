@@ -29,7 +29,7 @@
   <input class="category-toggle" type="radio" id="unknown" name="categories"/>
   <input class="category-cancel" type="radio" id="cancel" name="categories"/>
   <div class="periodic-table">
-    <div class="element other-nonmetal c1 r1">
+    <div class="element other-nonmetal c1 r1" data-wikipedia="https://en.wikipedia.org/wiki/Hydrogen">
       <input class="activate" type="radio" name="elements"/>
       <input class="deactivate" type="radio" name="elements"/>
       <div class="overlay"></div>
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="element noble-gas c18 r1">
+    <div class="element noble-gas c18 r1" data-wikipedia="https://en.wikipedia.org/wiki/Helium">
       <input class="activate" type="radio" name="elements"/>
       <input class="deactivate" type="radio" name="elements"/>
       <div class="overlay"></div>
@@ -1941,5 +1941,25 @@
     </div>
   </div>
 </div>
+
+
+<script>
+  // Get all elements with the class "element"
+  const elements = document.querySelectorAll(".element");
+
+  // Attach a click event listener to each element
+  elements.forEach((element) => {
+    element.addEventListener("click", () => {
+      // Get the Wikipedia URL from the data-wikipedia attribute
+      const wikipediaURL = element.getAttribute("data-wikipedia");
+
+      // Open the Wikipedia page in a new tab
+      window.open(wikipediaURL, "_blank");
+    });
+  });
+</script>
+
+
+
 </body>
 </html>
